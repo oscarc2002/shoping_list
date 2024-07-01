@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shopping_list/features/list/domain/entities/grocery_item.dart';
 import 'package:shopping_list/features/list/domain/usecases/user_save_item.dart';
 
 part 'save_event.dart';
@@ -22,7 +23,7 @@ class SaveBloc extends Bloc<ListEvent, SaveState> {
 
       res.fold(
         (failure) => emit(SaveFailure(failure.message)),
-        (uid) => emit(SaveSucces(uid)),
+        (saveItem) => emit(SaveSucces(saveItem)),
       );
     });
   }

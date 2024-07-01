@@ -1,9 +1,10 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
+import 'package:shopping_list/features/list/data/models/grocery_item_model.dart';
 
 abstract interface class SaveDataSource {
-  Future<String> saveItem({
+  Future<GroceryItemModel> saveItem({
     required var name,
     required var quantity,
     required var category,
@@ -12,7 +13,7 @@ abstract interface class SaveDataSource {
 
 class SaveDataSourceImpl implements SaveDataSource {
   @override
-  Future<String> saveItem({
+  Future<GroceryItemModel> saveItem({
     required var name,
     required var quantity,
     required var category,

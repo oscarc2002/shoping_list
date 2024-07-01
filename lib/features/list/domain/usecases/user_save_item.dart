@@ -1,14 +1,15 @@
 import 'package:fpdart/fpdart.dart';
 import 'package:shopping_list/core/error/failures.dart';
 import 'package:shopping_list/core/usecase/usecase.dart';
+import 'package:shopping_list/features/list/domain/entities/grocery_item.dart';
 import 'package:shopping_list/features/list/domain/repository/save_repository.dart';
 
-class UserSave implements UseCase<String, UserSaveParams> {
+class UserSave implements UseCase<GroceryItem, UserSaveParams> {
   final SaveRepository listRepository;
   const UserSave(this.listRepository);
 
   @override
-  Future<Either<Failure, String>> call(params) async {
+  Future<Either<Failure, GroceryItem>> call(params) async {
     return listRepository.saveItem(
       name: params.name,
       quantity: params.quantity,

@@ -8,8 +8,8 @@ final class SaveInitial extends SaveState {}
 final class SaveLoading extends SaveState{}
 
 final class SaveSucces extends SaveState{
-  final String uid;
-  SaveSucces(this.uid);
+  final GroceryItem saveItem;
+  SaveSucces(this.saveItem);
 }
 
 final class SaveFailure extends SaveState{

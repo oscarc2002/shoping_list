@@ -1,4 +1,4 @@
-import 'package:shopping_list/features/list/domain/entities/models/category.dart';
+import 'package:shopping_list/features/list/domain/entities/category.dart';
 import 'package:shopping_list/core/theme/app_pallete.dart';
 
 const categories = {

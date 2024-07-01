@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:shopping_list/features/list/data/categories.dart';
-import 'package:shopping_list/features/list/domain/entities/models/grocery_item.dart';
+import 'package:shopping_list/features/list/domain/entities/grocery_item.dart';
 import 'package:shopping_list/features/list/presentation/pages/new_item_screen.dart';
 import 'package:http/http.dart' as http;
 
