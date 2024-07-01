@@ -5,8 +5,8 @@ import 'package:shopping_list/features/list/presentation/bloc/save_bloc.dart';
 import 'package:shopping_list/features/list/presentation/widgets/auth_quantity_field.dart';
 import 'package:shopping_list/features/list/presentation/widgets/auth_name_field.dart';
 import 'package:shopping_list/features/list/presentation/widgets/save_button.dart';
-import 'package:shopping_list/features/list/domain/entities/models/category.dart';
-import 'package:shopping_list/features/list/domain/entities/models/grocery_item.dart';
+import 'package:shopping_list/features/list/domain/entities/category.dart';
+import 'package:shopping_list/features/list/domain/entities/grocery_item.dart';
 
 class NewItem extends StatefulWidget {
   const NewItem({super.key});
@@ -30,27 +30,6 @@ class _NewItemState extends State<NewItem> {
     quantityController.dispose();
     super.dispose();
   }
-
-  /*void _saveItem() async {
-    if (_formKey.currentState!.validate()) {
-      _formKey.currentState!.save();
-      _isSending = true;
-      //saveItem();
-
-      if (!context.mounted) {
-        return;
-      }
-
-      Navigator.of(context).pop(
-        GroceryItem(
-          id: resData['name'],
-          name: _enteredName,
-          quantity: _enteredQuantity,
-          category: _selectedCategory,
-        ),
-      );
-    }
-  }*/
 
   @override
   Widget build(BuildContext context) {
